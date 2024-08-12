@@ -1,0 +1,6 @@
+frame_chunks/
+label_chunks/
+training_results/
+datasets/
+
+__pycache__/
