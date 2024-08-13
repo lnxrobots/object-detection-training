@@ -2,7 +2,17 @@
 
 ## Software
 
-[AnyLabeling](https://github.com/vietanhdev/anylabeling)
+[AnyLabeling](https://github.com/vietanhdev/anylabeling) - nainstaluj cez `pip` alebo spusti binarku z releasu.
+
+### Skratky
+
+- Mozog vlavo dole - Auto labeling (hore nastav `rectangle` a napr. `MobileSAM`)
+- `A` - predosly frame
+- `D` - nasledujuci frame
+- `F` - potvrdit bounding box (po kliku pri auto labelingu)
+- `Q` - pridat oblast (auto labeling)
+- `E` - odobrat oblast (auto labeling)
+- `Ctrl+J`/ceruzka - upravit bounding box (musi byt potvrdeny)
 
 ## Chunky
 
