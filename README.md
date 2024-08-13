@@ -6,7 +6,7 @@
 
 ## Chunky
 
-1. [OneDrive](https://gamca-my.sharepoint.com/:f:/g/personal/misiak1_gamca_sk/Eo1ZiPH6jhJHplvrdqXCB28B5pB1ONpzuuKMLBv-ncBvqw): Skontroluj aky chunk este nie je urobeny v `evidencia.xlsx`, najlepsie z takeho stlpca co ich ma najmenej.
+1. [OneDrive](https://gamca-my.sharepoint.com/:f:/g/personal/misiak1_gamca_sk/Eo1ZiPH6jhJHplvrdqXCB28BSJIqW-pfNtqcpf7Q18kK7w): Skontroluj aky chunk este nie je urobeny v `evidencia.xlsx`, najlepsie z takeho stlpca co ich ma najmenej.
 2. Stiahni ho a rozbal ho
 3. Otvor rozbaleny priecinok v AnyLabeling
 4. Anotuj
@@ -23,10 +23,11 @@
 
 #### Ball
 
-Dobre viditelna lopta.
+Dobre viditelna lopta alebo jej cast.
 
 ![ball](annotation_examples/ball.png "Ball")
 ![ball](annotation_examples/ball2.png "Ball 2")
+![ball](annotation_examples/ball3.png "Ball 2")
 
 #### Smudge
 
@@ -38,7 +39,7 @@ Akakolvek lopta, ktora je v nejakom smere vacsia ako cca 1.75-nasobok skutocnej 
 
 ### Ako anotovat
 
-1. Ak je z lopty vidiet rozumny kus, oznacit ju az pokial si myslis ze ide, pripadne po kraj obrazka ak by isla dalej
+1. Loptu oznacit az pokial si myslis ze ide, pripadne po kraj obrazka ak by isla dalej
 ![lopta v dribbleri](annotation_examples/dribbler.png "Lopta v dribbleri")
 2. Snazit sa trafit bounding box co najpresnejsie
 3. Snazit sa hranicu medzi ball a smudge mat co najkonzistentnejsiu
