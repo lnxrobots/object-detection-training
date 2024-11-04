@@ -28,6 +28,7 @@ for key, value in CLASSES.items():
     if not CLASSES_DEDUP[int(value)]:
         CLASSES_DEDUP[int(value)] = key
 
+os.makedirs(DATASET_DIR, exist_ok=True)
 shutil.rmtree(DATASET_DIR)
 os.makedirs(DATASET_DIR, exist_ok=True)
 for dir in ['images', 'labels', 'labels_json']:
@@ -64,7 +65,7 @@ for img in os.listdir(os.path.join(DATASET_DIR, 'images')):
 
 print('Splitting dataset...')
 if SPLIT_RATIOS is not None:
-    split_dataset(DATASET_DIR, os.path.join(DATASET_DIR, 'images'), os.path.join(DATASET_DIR, 'labels'))
+    split_dataset(DATASET_DIR, os.path.join(DATASET_DIR, 'images'), os.path.join(DATASET_DIR, 'labels'), *SPLIT_RATIOS)
 
 print('Cleaning up...')
 for path, dirs, files in os.walk(DATASET_DIR):
