@@ -6,7 +6,7 @@
 
 ### Skratky
 
-- Mozog vlavo dole - Auto labeling (hore nastav `rectangle` a napr. `MobileSAM`, pripadne `Custom Model` a vybrat nas `ball.yaml`)
+- Mozog vlavo dole - Auto labeling (hore nastav napr. `MobileSAM`a `rectangle`, pripadne `Custom Model` a vybrat nas `ball.yaml`)
 - `A` - predosly frame
 - `D` - nasledujuci frame
 - `F` - potvrdit bounding box (po kliku pri auto labelingu)
@@ -41,7 +41,7 @@ Dobre viditelna lopta alebo jej cast.
 
 #### Smudge
 
-Akakolvek lopta, ktora je v nejakom smere vacsia ako cca 1.75-nasobok skutocnej velkosti lopty.
+Akakolvek lopta, ktora je v nejakom smere vacsia ako cca 1.75-nasobok skutocnej velkosti lopty, alebo skoro na nerozoznanie od niecoho ineho
 
 ![smudge](annotation_examples/smudge.png "Smudge")
 ![smudge](annotation_examples/smudge2.png "Smudge 2")
