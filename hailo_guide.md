@@ -12,10 +12,14 @@ For installation, remove `linux-headers...` from requirements and comment out in
 
 ## Training
 
-[Training in docker](https://github.com/hailo-ai/hailo_model_zoo/tree/833ae6175c06dbd6c3fc8faeb23659c9efaa2dbe/training/yolov8) worked, not sure if normal training works
+[Training in docker](https://github.com/hailo-ai/hailo_model_zoo/tree/833ae6175c06dbd6c3fc8faeb23659c9efaa2dbe/training/yolov8) worked, classic one didn't
 
 ```
-yolo detect train data=object_detection_test1_2chunks/data.yaml pretrained=0 epochs=200 mosaic=0 translate=0 degrees=0 scale=0 shear=0 perspective=0 crop_fraction=0 batch=16
+docker run --name "my_yolo_training" -it --gpus all --ipc=host -v ./datasets/:/workspace/ultralytics/datasets/ -v ./results/:/workspace/ultralytics/results/ yolov8:v0
+```
+
+```
+yolo detect train data=datasets/test2_5chunks/data.yaml pretrained=0 epochs=200 mosaic=0 translate=0 degrees=0 scale=0 shear=0 perspective=0 batch=16
 ```
 
 ## Export ONNX and compile
@@ -25,7 +29,7 @@ https://github.com/hailo-ai/hailo-rpi5-examples/blob/main/doc/retraining-example
 ### Export
 
 ```
-yolo export model=hailo_test3.pt imgsz=640 format=onnx opset=11
+yolo export model=best.pt imgsz=640 format=onnx opset=11
 ```
 
 ### Compile

@@ -13,6 +13,8 @@ def json_to_yolo(input_dir, output_dir, class_labels):
             with open(os.path.join(output_dir, filename.replace('.json', '.txt')), 'w') as out_file:
 
                 for shape in data['shapes']:
+                    if len(shape['points']) < 2:
+                        continue
 
                     x1, y1 = shape['points'][0]
                     x2, y2 = shape['points'][1]
