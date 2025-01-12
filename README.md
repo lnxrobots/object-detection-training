@@ -9,10 +9,12 @@
 - Mozog vlavo dole - Auto labeling (hore nastav napr. `MobileSAM`a `rectangle`, pripadne `Custom Model` a vybrat nas `ball.yaml`)
 - `A` - predosly frame
 - `D` - nasledujuci frame
-- `F` - potvrdit bounding box (po kliku pri auto labelingu)
-- `Q` - pridat oblast (auto labeling)
-- `E` - odobrat oblast (auto labeling)
+- `F` - potvrdit bounding box (po kliku pri SAM auto labelingu)
+- `Q` - pridat oblast (SAM auto labeling)
+- `E` - odobrat oblast (SAM auto labeling)
+- `I` - rozoznat lopty (nas model)
 - `Ctrl+J`/ceruzka - upravit bounding box (musi byt potvrdeny)
+- `Ctrl+E` - zmenit label (po oznaceni s `Ctrl+J`)
 
 ## Chunky
 
@@ -46,6 +48,7 @@ Akakolvek lopta, ktora je v nejakom smere vacsia ako cca 1.75-nasobok skutocnej 
 ![smudge](annotation_examples/smudge.png "Smudge")
 ![smudge](annotation_examples/smudge2.png "Smudge 2")
 ![smudge](annotation_examples/smudge3.png "Smudge 3")
+![smudge](annotation_examples/smudge4.png "Smudge 4")
 
 ### Ako anotovat
 
