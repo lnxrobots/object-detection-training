@@ -23,4 +23,4 @@ cd hailo_model_zoo/training/yolov8
 docker build --build-arg timezone=`cat /etc/timezone` -t yolov8:v0 .
 
 # Run docker image
-docker run --name "my_yolo_training" --gpus all --ipc=host -v ./datasets/:/workspace/ultralytics/datasets/ -v ./runs/:/workspace/ultralytics/runs/ -v ./object_detection_training/training/train.sh:/workspace/ultralytics/train.sh yolov8:v0
+docker run -it --name "my_yolo_training" --gpus all --ipc=host -v ./datasets/:/workspace/ultralytics/datasets/ -v ./runs/:/workspace/ultralytics/runs/ -v ./object_detection_training/training/train.sh:/workspace/ultralytics/train.sh yolov8:v0
