@@ -2,6 +2,12 @@
 
 TODO: find out whether `.pt` not from docker works.
 
+## Dataset building
+
+```
+python .\build_dataset.py ball_12chunks ball=0 ball_part=0 smudge=1 split=[0.9,0.08]
+```
+
 ## Hailo software
 
 https://hailo.ai/developer-zone/software-downloads/
