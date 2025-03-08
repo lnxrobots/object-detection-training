@@ -9,7 +9,7 @@ INPUT_DIR = os.path.join("frames/", PREFIX, EVENT)
 OUTPUT_DIR = os.path.join('FrameChunks'+EVENT, PREFIX+"Chunks")
 GROUP_SIZE = 500
 
-NAME = EVENT+'{}.jpg'
+NAME = EVENT+'_{tarname}_{frame}.jpg'
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 start = time.time()
@@ -25,7 +25,7 @@ for tarName in os.listdir(INPUT_DIR):
     members = tarFile.getmembers()
 
     for m in members:
-        frames.append((m, tarFile.extractfile(m)))
+        frames.append((os.path.splitext(tarName)[0], m, tarFile.extractfile(m)))
 
 
 nGroups = len(frames) // GROUP_SIZE + 1
@@ -34,8 +34,8 @@ for i in range(nGroups):
     print(f"Creating Chunk {i+1} of {nGroups} ({(i+1)/nGroups*100:.2f} %)")
     with tarfile.open(f"{OUTPUT_DIR}/Chunk{i+FIRST}.tar", "w") as tarFile:
         for j in range(i, len(frames), nGroups):
-            member, frame = frames[j]
-            member.name = NAME.format(j)
+            tarName, member, frame = frames[j]
+            member.name = NAME.format(frame=j, tarname=tarName)
             tarFile.addfile(member, frame)
 
 print(f'Last: Chunk{nGroups-1+FIRST}.tar')

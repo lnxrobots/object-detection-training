@@ -38,7 +38,7 @@ def split_dataset(base_path, images_path, labels_path, train_ratio=0.70, val_rat
     move_files(val_files, 'val')
     move_files(test_files, 'test')
 
-    print("Dataset successfully split into train, val, and test sets.")
+    print(f"Dataset successfully split into train ({len(train_files)}), val ({len(val_files)}), and test ({len(test_files)}) sets.")
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
