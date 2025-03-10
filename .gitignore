@@ -4,5 +4,7 @@ label_chunks/
 training_results/
 datasets/
 test_images/
+*.db
+*.db-journal
 
 __pycache__/

@@ -20,5 +20,5 @@ def parse_lnxrepl(line: str) -> dict:
         "motor_values": parsed[38:42],
         "robot_position": parsed[42:44],
         "n_field_robots": parsed[44],
-        "enemy_positions": parsed[45:51]
+        "enemy_positions": [(parsed[45 + i*2], parsed[46 + i*2]) for i in range(parsed[44])]
     }

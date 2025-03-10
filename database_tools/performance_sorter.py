@@ -4,8 +4,8 @@ import tarfile
 import cv2
 import numpy as np
 import json
-from tar_fixer import fix_tar
-from replay_parsers import parse_lnxrepl
+# from tar_fixer import fix_tar
+from database_tools.replay_parsers import parse_lnxrepl
 from datetime import datetime
 
 directory = sys.argv[1]
@@ -56,9 +56,11 @@ for file in os.listdir(frames_dir):
         with tarfile.open(tar_path) as tar:
             members = tar.getmembers()
     except tarfile.ReadError:
-        print(f"\nFixing {tar_path}", end='\n\n')
-        fix_tar(tar_path)
-        print('')
+        # print(f"\nFixing {tar_path}", end='\n\n')
+        # fix_tar(tar_path)
+        # print('')
+        print(f"Invalid tar file: {tar_path}")
+        continue
 
     # Extract date and time from the tar file name
     tar_datetime = datetime.strptime(file, f'frames_%Y-%m-%d-%H_%M_%S_{suffix}.tar')

@@ -5,7 +5,7 @@ TODO: find out whether `.pt` not from docker works.
 ## Dataset building
 
 ```
-python .\build_dataset.py ball_12chunks ball=0 ball_part=0 smudge=1 split=[0.9,0.08]
+python build_dataset.py front_ball_6552 ball=0 smudge=1 split=[0.8,0.15]
 ```
 
 ## Hailo software
