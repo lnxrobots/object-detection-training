@@ -56,5 +56,3 @@ Akakolvek lopta, ktora je v nejakom smere vacsia ako cca 1.75-nasobok skutocnej 
 ![lopta v dribbleri](annotation_examples/dribbler.png "Lopta v dribbleri")
 2. Snazit sa trafit bounding box co najpresnejsie
 3. Snazit sa hranicu medzi ball a smudge mat co najkonzistentnejsiu
-4. Ak je robot nad loptou, **neoznacovat**
-![Robot above balls](annotation_examples/above.png)
