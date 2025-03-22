@@ -8,3 +8,4 @@ test_images/
 *.db-journal
 
 __pycache__/
+venv/
