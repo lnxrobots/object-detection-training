@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 import json
 # from tar_fixer import fix_tar
-from database_tools.replay_parsers import parse_lnxrepl
+from replay_parsers import parse_lnxrepl
 from datetime import datetime
 
 directory = sys.argv[1]

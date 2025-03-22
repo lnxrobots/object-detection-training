@@ -8,7 +8,7 @@ import re
 import numpy as np
 import hashlib
 from datetime import datetime
-from database_tools.replay_parsers import parse_lnxrepl
+from replay_parsers import parse_lnxrepl
 from constants import *
 
 # Configuration
@@ -49,7 +49,7 @@ os.makedirs(ALL_FRAMES_PATH, exist_ok=True)
 conn = sqlite3.connect(DB_PATH)
 cursor = conn.cursor()
 
-with open("create_table.sql") as f:
+with open(os.path.join(os.path.dirname(__file__), "create_table.sql")) as f:
     cursor.execute(f.read())
 
 conn.commit()

@@ -3,7 +3,7 @@ import os
 import json
 import re
 from datetime import datetime
-from database_tools.replay_parsers import parse_lnxrepl
+from replay_parsers import parse_lnxrepl
 from constants import *
 
 def has_same_time(tar_name, repl_name):
