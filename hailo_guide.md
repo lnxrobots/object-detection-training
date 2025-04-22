@@ -1,7 +1,5 @@
 # Guide for Hailo 8l
 
-TODO: find out whether `.pt` not from docker works.
-
 ## Dataset building
 
 ```
@@ -52,12 +50,15 @@ https://www.raspberrypi.com/documentation/accessories/ai-kit.html
 
 ### Custom software
 
+For installation of latest hailo software
+
 https://community.hailo.ai/t/still-unable-to-run-4-18-on-rpi5/1985/14
 
-Use with caution, didn't really work.
+Not recommended, didn't really work.
 
 ## Raspberry Pi inference
 
-https://github.com/hailo-ai/hailo-rpi5-examples/blob/main/README.md
+Using built-in picamera2 interface. Accepts BGR input (the channels in the example are in the wrong order)
 
-For raspberry pi camera, modify autofocus mode as the error says and add framerates everywhere where is size set in `basic_pipelines/detection.py`
+https://github.com/raspberrypi/picamera2/blob/main/examples/hailo/detect.py
+
